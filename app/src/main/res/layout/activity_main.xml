@@ -1,19 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_fire_extinguisher"
+                app:tint="@color/red_accent"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Firefighter Command Center"
+                android:textColor="@color/white_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System Online"
+                android:textColor="@color/green_online"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_online_dot"
+                app:tint="@color/green_online"/>
+        </LinearLayout>
+
+        <!-- Status Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="8dp">
+
+            <!-- Active Fires Card -->
+            <TextView
+                android:id="@+id/activeFiresCount"
+                style="@style/StatCard.Red"
+                android:text="1" />
+
+            <!-- En Route Card -->
+            <TextView
+                android:id="@+id/enRouteCount"
+                style="@style/StatCard.Orange"
+                android:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="16dp">
+
+            <!-- On Scene Card -->
+            <TextView
+                android:id="@+id/onSceneCount"
+                style="@style/StatCard.Blue"
+                android:text="1" />
+
+            <!-- Contained Card -->
+            <TextView
+                android:id="@+id/containedCount"
+                style="@style/StatCard.Green"
+                android:text="0" />
+        </LinearLayout>
+
+        <!-- Priority Alerts Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Priority Alerts"
+            android:textColor="@color/white_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Alerts RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/alertsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_alert" />
+    </LinearLayout>
+</ScrollView>

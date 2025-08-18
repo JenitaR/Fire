@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black_background">#121212</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="gray_text">#BDBDBD</color>
+    <color name="red_accent">#D32F2F</color>
+    <color name="green_online">#4CAF50</color>
+    <color name="warning_orange">#FFC107</color>
+
+    <!-- Stat card background colors -->
+    <color name="red_stat_bg">#8B0000</color>
+    <color name="orange_stat_bg">#A0522D</color>
+    <color name="blue_stat_bg">#1F6FEB</color>
+    <color name="green_stat_bg">#2E8B57</color>
+
+    <!-- Alert card and badge colors -->
+    <color name="dark_card_bg">#1F2937</color>
+    <color name="red_badge">#D32F2F</color>
+    <color name="blue_badge">#1976D2</color>
 </resources>

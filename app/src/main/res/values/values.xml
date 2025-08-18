@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    < />
+!- Add tools namespace if you use tools attributes -->    <style name="DashboardNavButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#1F6FEB</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="StatCard.Base">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="StatCard.Red" parent="StatCard.Base">
+        <item name="android:background">#8B0000</item>
+    </style>
+
+    <style name="StatCard.Orange" parent="StatCard.Base">
+        <item name="android:background">#A0522D</item>
+    </style>
+
+    <style name="StatCard.Blue" parent="StatCard.Base">
+        <item name="android:background">#1F6FEB</item>
+    </style>
+
+    <style name="StatCard.Green" parent="StatCard.Base">
+        <item name="android:background">#2E8B57</item>
+    </style>
+
+    <style name="AlertCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#1F2937</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+    </style>
+
+    <style name="StatusBadge.Base">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="StatusBadge.Red" parent="StatusBadge.Base">
+        <item name="android:background">#D32F2F</item>
+    </style>
+
+    <style name="StatusBadge.Blue" parent="StatusBadge.Base">
+        <item name="android:background">#1976D2</item>
+    </style>
+
+</resources>
