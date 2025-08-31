@@ -1,6 +1,12 @@
-<resources>
-    <string name="app_name">Fire</string>
-    <string name="firefighter_dashboard">Firefighter Dashboard</string>
-    <string name="firefighter_icon">Firefighter Icon</string>
-    <string name="view_alerts">View Alerts</string>
+<resources><!-- Main screen strings -->
+    <string name="emergency_response_title">Emergency Response</string>
+    <string name="emergency_response_subtitle">Press the button below to report a fire emergency</string>
+    <string name="sos_text">SOS\nFIRE EMERGENCY</string>
+    <string name="alert_info">This will immediately alert local fire departments and emergency services</string>
+    <string name="emergency_line">Emergency Line</string>
+    <string name="emergency_number">911</string>
+    <string name="location_label">Location</string>
+    <string name="location_status">Auto-detected</string>
+    <string name="fire_safety_reminder_title">Fire Safety Reminder</string>
+    <string name="fire_safety_reminder_text">If possible, evacuate immediately. Stay low to avoid smoke. Do not use elevators. Meet at your designated assembly point.</string>
 </resources>
