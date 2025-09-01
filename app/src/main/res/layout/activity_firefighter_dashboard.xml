@@ -49,11 +49,6 @@
 
         <Button
             style="@style/DashboardNavButton"
-            android:text="Dashboard"
-            android:backgroundTint="#D32F2F"/>
-
-        <Button
-            style="@style/DashboardNavButton"
             android:text="Active Calls" />
 
         <Button
@@ -62,6 +57,7 @@
 
         <Button
             style="@style/DashboardNavButton"
+            android:layout_width="110dp"
             android:text="GPS Map" />
     </LinearLayout>
 

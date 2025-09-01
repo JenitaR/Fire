@@ -1,4 +1,9 @@
 <resources><!-- Main screen strings -->
+    <string name="app_name">Fire</string>
+    <string name="dashboard_title">Firefighter Dashboard</string>
+    <string name="view_alerts">View Alerts</string>
+    <string name="open_map">Open Map</string>
+    <string name="details">Details</string>
     <string name="emergency_response_title">Emergency Response</string>
     <string name="emergency_response_subtitle">Press the button below to report a fire emergency</string>
     <string name="sos_text">SOS\nFIRE EMERGENCY</string>

@@ -1,117 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_background"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Title -->
+
+    <!-- View Alerts Button -->
+
+    <!-- Open Map Button -->
+
+    <!-- Details Button -->
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="182dp"
+        android:layout_height="50dp"
+        android:background="#FF5722"
+        android:backgroundTint="#FF5722"
+        android:backgroundTintMode="add"
+        android:text="Enroute"
+        android:textColorLink="#FF5722"
+        app:icon="@color/sos_red"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="182dp"
+        android:layout_height="50dp"
+        android:background="#FF0000"
+        android:backgroundTint="#FF0303"
+        android:backgroundTintMode="add"
+        android:text="Contained"
+        app:icon="@color/red_stat_bg"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="182dp"
+        android:layout_height="50dp"
+        android:background="#FF0000"
+        android:backgroundTint="#FF0303"
+        android:backgroundTintMode="add"
+        android:text="On Scene"
+        app:icon="@color/red_stat_bg"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/dashboardTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_marginTop="28dp"
+        android:text="@string/dashboard_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Header -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingBottom="16dp">
+    <Button
+        android:id="@+id/openMapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:text="@string/open_map"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="667dp" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_fire_extinguisher"
-                app:tint="@color/red_accent"
-                android:layout_marginEnd="8dp"/>
+    <Button
+        android:id="@+id/viewAlertsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_alerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="667dp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Firefighter Command Center"
-                android:textColor="@color/white_text"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/detailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="667dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="System Online"
-                android:textColor="@color/green_online"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="70dp"
+        android:layout_height="49dp"
+        android:button="@android:drawable/presence_online"
+        android:buttonTint="@color/green_online"
+        android:checked="true"
+        android:clickable="true"
+        android:duplicateParentState="false"
+        android:focusable="auto"
+        android:text=" Online"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="60dp"
+        tools:visibility="visible" />
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/ic_online_dot"
-                app:tint="@color/green_online"/>
-        </LinearLayout>
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="182dp"
+        android:layout_height="50dp"
+        android:background="#FF0000"
+        android:backgroundTint="#FF0303"
+        android:backgroundTintMode="add"
+        android:text="Active"
+        app:icon="@color/red_stat_bg"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="143dp" />
 
-        <!-- Status Cards -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="8dp">
-
-            <!-- Active Fires Card -->
-            <TextView
-                android:id="@+id/activeFiresCount"
-                style="@style/StatCard.Red"
-                android:text="1" />
-
-            <!-- En Route Card -->
-            <TextView
-                android:id="@+id/enRouteCount"
-                style="@style/StatCard.Orange"
-                android:text="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="16dp">
-
-            <!-- On Scene Card -->
-            <TextView
-                android:id="@+id/onSceneCount"
-                style="@style/StatCard.Blue"
-                android:text="1" />
-
-            <!-- Contained Card -->
-            <TextView
-                android:id="@+id/containedCount"
-                style="@style/StatCard.Green"
-                android:text="0" />
-        </LinearLayout>
-
-        <!-- Priority Alerts Header -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Priority Alerts"
-            android:textColor="@color/white_text"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <!-- Alerts RecyclerView -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/alertsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_alert" />
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
